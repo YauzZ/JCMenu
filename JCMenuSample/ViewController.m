@@ -19,26 +19,49 @@
 {
     [super viewDidLoad];
     
+    /*
+     Without selected image
+     */
     
-    JCMenuItem *facebook = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"facebook"] action:^(JCMenuItem *item){
-        [self.textLabel setText:@"Facebook"];
+//    JCMenuItem *menu1 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu1"] selectedImage:nil action:^(JCMenuItem *item){
+//        [self.textLabel setText:@"Menu 1"];
+//    }];
+//    
+//    JCMenuItem *menu2 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu2"] selectedImage:nil action:^(JCMenuItem *item){
+//        [self.textLabel setText:@"Menu 2"];
+//    }];
+//    
+//    JCMenuItem *menu3 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu3"] selectedImage:nil action:^(JCMenuItem *item){
+//        [self.textLabel setText:@"Menu 3"];
+//    }];
+//    
+//    JCMenuItem *menu4 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu4"] selectedImage:nil action:^(JCMenuItem *item){
+//        [self.textLabel setText:@"Menu 4"];
+//    }];
+    
+    /*
+     With selected image
+     */
+    
+    JCMenuItem *menu1 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu1"] selectedImage:[UIImage imageNamed:@"menu1_selected"] action:^(JCMenuItem *item){
+        [self.textLabel setText:@"Menu 1"];
     }];
     
-    JCMenuItem *tumblr = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"tumblr"] action:^(JCMenuItem *item){
-        [self.textLabel setText:@"Tumblr"];
+    JCMenuItem *menu2 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu2"] selectedImage:[UIImage imageNamed:@"menu2_selected"] action:^(JCMenuItem *item){
+        [self.textLabel setText:@"Menu 2"];
     }];
     
-    JCMenuItem *yahoo = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"yahoo"] action:^(JCMenuItem *item){
-        [self.textLabel setText:@"Yahoo"];
-    }];
-
-    JCMenuItem *youtube = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"youtube"] action:^(JCMenuItem *item){
-        [self.textLabel setText:@"Youtube"];
+    JCMenuItem *menu3 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu3"] selectedImage:[UIImage imageNamed:@"menu3_selected"] action:^(JCMenuItem *item){
+        [self.textLabel setText:@"Menu 3"];
     }];
     
-    JCMenu *menu = [[JCMenu alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height - 60, self.view.frame.size.width - 20, 50) items:@[facebook, tumblr, yahoo, youtube]];
-    [menu setSelectedItem:facebook];
-    [menu setMenuTintColor:[UIColor colorWithRed:189/255.0f green:22/255.0f blue:34/255.0f alpha:1.0f]];
+    JCMenuItem *menu4 = [[JCMenuItem alloc] initWithImage:[UIImage imageNamed:@"menu4"] selectedImage:[UIImage imageNamed:@"menu4_selected"] action:^(JCMenuItem *item){
+        [self.textLabel setText:@"Menu 4"];
+    }];
+    
+    JCMenu *menu = [[JCMenu alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height - 60, self.view.frame.size.width - 20, 50) items:@[menu1, menu2, menu3, menu4]];
+    [menu setSelectedItem:menu1];
+    [menu setMenuTintColor:[UIColor colorWithWhite:0 alpha:0.1]];
     [self.view addSubview:menu];
 }
 

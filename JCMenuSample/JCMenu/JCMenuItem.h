@@ -33,9 +33,15 @@
 
 typedef void(^actionItem)(JCMenuItem *item);    // Block action
 
-- (id)initWithImage:(UIImage*)image action:(actionItem)action;
+/*
+ @image         -> unselected image / normal image if no selected image.
+ @selectedImage -> selected image / nil
+ @action        -> action related to item
+ */
+- (instancetype)initWithImage:(UIImage*)image selectedImage:(UIImage *)selectedImage action:(actionItem)action;
 
-@property(strong, nonatomic) UIImage     *image;
+@property(nonatomic, strong) UIImage     *image;
+@property(nonatomic, strong) UIImage     *selectedImage;
 @property(nonatomic, copy)   actionItem   action;
 
 @end

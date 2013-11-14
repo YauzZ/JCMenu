@@ -3,7 +3,8 @@ JCMenu
 
 JCMenu is an expanded menu.
 
-![Screenshot](https://github.com/jbaptistecastro/JCMenu/raw/master/jcmenu.gif)
+![Screenshot](https://github.com/jbaptistecastro/JCMenu/raw/master/JCMenu1.png)
+![Screenshot](https://github.com/jbaptistecastro/JCMenu/raw/master/JCMenu2.png)
 
 Installation
 ============
@@ -18,7 +19,7 @@ Use
 Add items : 
 
 ``` objective-c
-JCMenuItem *item1 = [[JCMenuItem alloc] initWithImage:image action:^(JCMenuItem *item){
+JCMenuItem *item1 = [[JCMenuItem alloc] initWithImage:image selectedImage:selectedImage action:^(JCMenuItem *item){
         NSLog(@"Item 1");
     }];
 ```
@@ -38,12 +39,17 @@ Appearance
 @property(nonatomic, strong)   UIColor        *menuTintColor;       
 ```
 
+Update
+======
+11.14
+* Add selectedImage property to JCMenuItem
+* Add highlight management
+
 TODO
 =====
 
 * More customization
 * Different menu position
-* Highlight work
 * Animation
 * ...
 

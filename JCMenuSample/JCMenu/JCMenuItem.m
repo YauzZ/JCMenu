@@ -31,11 +31,12 @@
 
 @implementation JCMenuItem
 
-- (id)initWithImage:(UIImage *)image action:(actionItem)action
+- (instancetype)initWithImage:(UIImage *)image selectedImage:(UIImage *)selectedImage action:(actionItem)action
 {
     self = [super init];
     if (self) {
         self.image = image;
+        self.selectedImage = selectedImage;
         self.action = action;
     }
     
